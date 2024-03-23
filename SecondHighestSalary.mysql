@@ -1,0 +1,15 @@
+# https://leetcode.com/problems/second-highest-salary/submissions/1211940571
+
+# Write your MySQL query statement below
+SELECT 
+(SELECT 
+salary
+FROM
+(SELECT
+ROW_NUMBER() OVER (ORDER BY salary desc) AS row_num,
+salary
+FROM
+Employee
+GROUP BY salary
+) as a
+WHERE row_num = 2) as SecondHighestSalary FROM dual
