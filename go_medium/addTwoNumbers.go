@@ -12,18 +12,6 @@ type List struct {
     head *ListNode
 }
 
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-
-type List struct {
-    head *ListNode
-}
-
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     
     curNode1 := l1;
